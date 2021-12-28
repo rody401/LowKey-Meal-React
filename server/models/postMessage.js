@@ -4,7 +4,7 @@ const postSchema = mongoose.Schema({
     store: String,
     author: String,
     review: String,
-    rating: String,
+    rating: Number,
     tags: [String],
     selectedFile: String,
     likeCount: {

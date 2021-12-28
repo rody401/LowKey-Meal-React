@@ -17,6 +17,9 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req, res) => {
+  res.send('You are at LowKey Meal Api')
+})
 
 const connectURL = process.env.REACT_APP_DB_STRING;
 const PORT = process.env.PORT|| 5000;
@@ -25,6 +28,6 @@ mongoose.connect(connectURL, { useNewUrlParser: true, useUnifiedTopology: true }
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
-  mongoose.set('useFindAndModify', false);
+
 
 
