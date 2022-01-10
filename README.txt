@@ -1,1 +1,1 @@
-React web appilcation taht allows you to add and view food trucks and carts you visisted and reviwe them. 
+React web appilcation taht allows you to add and view food trucks and carts you visisted and review them. 
