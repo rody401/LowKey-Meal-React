@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Container, AppBar, Grow, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 
-import Posts from './components/Posts/Posts';
-import Form from './components/Form/Form';
-import { getPosts } from './actions/posts';
-import useStyles from './styles';
+import Posts from './components/Posts/Posts.js';
+import Form from './components/Form/Form.js';
+import { getPosts } from './actions/posts.js';
+import useStyles from './styles.js';
 import logo from './images/LowKeyMeal.png';
 
 const App = () => {

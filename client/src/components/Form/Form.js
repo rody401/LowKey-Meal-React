@@ -8,7 +8,7 @@ import useStyles from './styles';
 import { createPost, updatePost } from '../../actions/posts';
 
 const Form = ({ currentId, setCurrentId }) => {
-  const [postData, setPostData] = useState({ store: '', author: '', review: '', rating: 0, tags: '',  selectedFile: '' });
+  const [postData, setPostData] = useState({ store: '', author: '', review: '', rating: 0, tags: '', selectedFile: '' });
   const post = useSelector((state) => (currentId ? state.posts.find((review) => review._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -19,7 +19,7 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const clear = () => {
     setCurrentId(0);
-    setPostData({ store: '', author: '',  review: '', rating: 0, tags: '', selectedFile: '' });
+    setPostData({ store: '', author: '', review: '', rating: 0, tags: '', selectedFile: '' });
   };
 
   const handleSubmit = async (e) => {
@@ -37,7 +37,7 @@ const Form = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? "Editing Review" : 'Add A Food Cart/Truck'}</Typography>
+        <Typography variant="h6">{currentId ? 'Editing Review' : 'Add A Food Cart/Truck'}</Typography>
         <TextField name="store" variant="outlined" label="Store" fullWidth value={postData.store} onChange={(e) => setPostData({ ...postData, store: e.target.value })} />
         <TextField name="author" variant="outlined" label="Author" fullWidth value={postData.author} onChange={(e) => setPostData({ ...postData, author: e.target.value })} />
         <TextField name="review" variant="outlined" label="Review" fullWidth multiline rows={4} value={postData.review} onChange={(e) => setPostData({ ...postData, review: e.target.value })} />

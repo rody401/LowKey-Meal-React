@@ -43,7 +43,7 @@ export default makeStyles({
   },
   store: {
     padding: '0 16px',
-    paddingTop: '10px'
+    paddingTop: '10px',
   },
   cardActions: {
     padding: '0 16px 8px 16px',

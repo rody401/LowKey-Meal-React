@@ -29,7 +29,7 @@ const Post = ({ post, setCurrentId }) => {
         <Typography variant="body2" color="textSecondary" component="p">{post.review}</Typography>
       </CardContent>
       <CardContent>
-        <Rating readOnly component="p" value={post.rating}precision={0.5} max={5}/>
+        <Rating readOnly component="p" value={post.rating} precision={0.5} max={5} />
       </CardContent>
       <div className={classes.review}>
         <Typography variant="body2" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
